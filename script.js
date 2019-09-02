@@ -1,13 +1,22 @@
-let add = document.querySelector("#addList");
+let add = document.querySelectorAll("button")[0];
+let shoppingListInput = document.querySelector("input");
 function push(){
-  let shoppingListInput = document.querySelector("input");
-  let shoppingList = document.createElement("h4");
+  let shoppingList = document.createElement("shoppingList");
   shoppingList.appendChild(document.createTextNode(shoppingListInput.value));
   document.querySelector("div").appendChild(shoppingList);
-  shoppingList.appendChild(document.createTextNode("(0,0)"));
-  document.querySelector("div").appendChild(viewCategory());
   shoppingListInput.value = "";
-  shoppingList.style.maxWidth = "700px";
-  shoppingList.style.margin = "0 auto"
-}
 
+  document.querySelector("div").addEventListener("click", event => {
+  if (event.target.nodeName == "SHOPPINGLIST") {
+    let itemDescription = document.querySelector("input");
+    itemDescription.placeholder = "Input an item description";
+    let itemList = document.createElement("itemList");
+    document.body.appendChild(itemList);
+    itemList.appendChild(document.createTextNode(itemDescription.value));
+    document.querySelector("div").appendChild(itemList);
+    itemDescription.value = "";
+    }
+  }); 
+};
+
+add.addEventListener('click', push);
