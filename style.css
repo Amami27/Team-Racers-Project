@@ -1,23 +1,50 @@
-body{
-    margin: 0;
-    padding: 0;
+.Background {
+	background-image: url('Background.jpg');
 }
-
-#container {
-    background-image: url("https://images.pexels.com/photos/220076/pexels-photo-220076.jpeg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 auto;
+h3 {
+	margin-left: 10px;
+	color: #ff0905;
+	font-style: italic;
 }
-
-input{
-    width: 25%;
-    padding: .5em;
+#text__box{
+	background-color: #faa191;
+	border-radius: 20px;
+	border-color: #ff0905;
+	font-size: 40px;
+	width: 60%
 }
-
-#shoppingListNote{
-    margin: 0 auto;
-    max-width: 700px;;
+#create__button {
+	background-color: #f0c7a3;
+	border-radius: 5px;
+	border-color: black;
+	font-size: 40px;
+	color: #3bff05;
+}
+#options__button {
+	background-color: #f0c7a3;
+	border-radius: 5px;
+	border-color: black;
+	font-size: 40px;
+}
+div{
+	font-style: italic;
+	font-weight: 200;
+	font-size: 30px;
+}
+div shoppingList{
+	width: 35%;
+	padding: 5px 0px 30px 5px;
+	margin: 10px 0px 0px 0px;
+	background-color: #f59300;
+	font-size: 30px;
+	font-weight: 200;
+	border: 2px;
+	display: flex;
+	justify-content: space-between;
+}
+shoppingList.value{
+	width: 40%;
+	padding: 5px;
+	border: 2px solid orange;
+	border-radius: 5px;
 }
